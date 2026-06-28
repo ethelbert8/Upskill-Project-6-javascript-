@@ -1,0 +1,81 @@
+// Task 6: Simple Contact Book
+
+// Step 1: Create an empty contact book
+let contactBook = [];
+
+// Step 2: Function to add a new contact
+function addContact(name, phone, email) {
+  let newContact = {
+    name: name,
+    phone: phone,
+git add .
+git commit -m "Add Task 6 contact book"
+git push    email: email
+  };
+  contactBook.push(newContact);
+  console.log("Contact added: " + name);
+}
+
+// Step 3: Function to search for a contact by name
+function searchContact(name) {
+  let found = contactBook.find(function(contact) {
+    return contact.name.toLowerCase() === name.toLowerCase();
+  });
+
+  if (found) {
+    console.log("Contact Found:");
+    console.log("Name: " + found.name);
+    console.log("Phone: " + found.phone);
+    console.log("Email: " + found.email);
+  } else {
+    console.log("No contact found with the name " + name);
+  }
+}
+
+// Step 4: Function to list all contacts alphabetically
+function listContacts() {
+  let sorted = contactBook.slice().sort(function(a, b) {
+    if (a.name < b.name) return -1;
+    if (a.name > b.name) return 1;
+    return 0;
+  });
+
+  console.log("All Contacts (A-Z):");
+  for (let i = 0; i < sorted.length; i++) {
+    console.log((i + 1) + ". " + sorted[i].name + " | " + sorted[i].phone + " | " + sorted[i].email);
+  }
+}
+
+// Step 5: Adding 5 contacts
+addContact("Ethelbert Eze", "08012345678", "ethelbert@gmail.com");
+addContact("Amaka Obi", "08098765432", "amaka@yahoo.com");
+addContact("Chukwudi Nwosu", "07056781234", "chukwudi@outlook.com");
+addContact("Zara Ahmed", "09011223344", "zara@gmail.com");
+addContact("Blessing Onu", "08133445566", "blessing@mail.com");
+
+// Step 6: Demonstrating all three functions
+
+// Listing all contacts
+listContacts();
+
+// Searching for a contact
+searchContact("Zara Ahmed");
+
+// Testing lowercase search
+searchContact("amaka obi");
+
+// Searching for someone not in the list
+searchContact("Tunde Bello");
+git add .
+git commit -m "Add Task 6 contact book"
+git push 
+git status 
+git log 
+git init
+Initialized empty Git repository in /sdcard/Project /Upskill project 6 javascript /.git/
+ls /sdcard
+
+ls /sdcard
++C
+ 
+
